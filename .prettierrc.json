@@ -2,9 +2,18 @@
   "arrowParens": "avoid",
   "bracketSpacing": true,
   "htmlWhitespaceSensitivity": "css",
+  "importOrder": [
+    "^@preact/(.*)$",
+    "^preact/(.*)$",
+    "^[./]",
+    "./style.module.css"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
   "insertPragma": false,
   "jsxBracketSameLine": false,
   "jsxSingleQuote": false,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "printWidth": 80,
   "proseWrap": "always",
   "quoteProps": "consistent",
