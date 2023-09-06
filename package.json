@@ -6,13 +6,20 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "ci:lint": "yarn eslint . && yarn prettier --log-level warn --check \"**/*.{tsx,ts,jsx,cjs,mjs,js,html,css,json}\"",
+    "lint": "yarn eslint . --fix && yarn prettier --log-level warn --write \"**/*.{tsx,ts,jsx,cjs,mjs,js,html,css,json}\" && yarn eslint ."
   },
   "dependencies": {
     "preact": "^10.16.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }
